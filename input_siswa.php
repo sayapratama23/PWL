@@ -11,14 +11,16 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top" id="mainNav">
     
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">MOZALUCKY BARBERSHOP</a>
+        <a class="navbar-brand" href="user.php">MOZALUCKY BARBERSHOP</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link js-scrool-trigger" aria-current="page" href="index.php">HOME</a>
+            <a class="nav-link js-scrool-trigger" aria-current="page" href="user.php">HOME</a>
             </li>
             <li class="nav-item">
             <a class="nav-link js-scrool-trigger"href="input_siswa.php">INPUT PELANGGAN</a>
@@ -41,44 +43,31 @@
     </div>
     </nav>
 
-
+    
     <form action="simpan_siswa.php" method="POST">
     
-        <fieldset>
-            <br>
-            <br>
-            <br>
-            <br>
-        <p>
-           <ul> <label for="Nama"> <ul> Nama: </ul></label>
-            <input type="text" name="Nama" placeholder="Masukkan Nama" /></ul>
-        </p>
-        <p>
-            <ul><label for="NO_HP"> <ul> No Handphone: </ul></label>
-            <input type="text" name="NO_HP" placeholder="Nomor Handphone"/></ul>
-        </p>
-        <p>
-            <ul><label for="JK"><ul> Jenis Kelamin: </ul></label>
-            <label><input type="radio" name="JK" value="Laki-Laki">Laki-Laki</label>
-            <label><input type="radio" name="JK" value="Perempuan">Perempuan</label></ul>
-        </p>
-        <p>
-            <ul><label for="Tagihan"><ul> Harga: </ul></label>
-            <select name="Tagihan">
-
-                <option>Biasa = 20.000</option>
-                <option>Cukur + Keramas = 25.000</option>
-                <option>Jenggot = +3.000</option>
+        <h2 align="center"><font color="#FF0000" style="alignment-baseline:" ><i><u>Input Pelanggan </u></i></font></h2>
+        <table border="0" align="center">
+        
+        <tr><td>Nama</td> <td><input type="text" name="Nama" size="30" /></td></tr>
+        <tr><td>Jenis Kelamin</td> <td><input type="radio" name="JK" value="Laki-Laki" />
+        Laki-laki<input type="radio" name="JK" value="Perempuan" /> 
+        Perempuan</td></tr>
+        <tr><td>Nomor HP </td> <td><input type="text" size="30" name="NO_HP" /></td></tr>
+        <tr><td>Service & Pricing </td> <td><select name="Tagihan">
+        <option value="Premium Cut 25K"> Premium Cut (Wash,Hair Tonic,Pomade & Styling) 25K</option>
+                <option value="Gentleman Cut 20K"> Gentleman Cut (Hair Cut Only) 20K</option>
+                <option value="Hair Design 10K"> Hair Design (Free Hair Tonic, Pomade & Styling) 10K</option>
+                <option value="Shaving 10K" selected> Shaving (Hot Towel & After Shave Product) 10K</option>
+                <option value="Coloring (By Confirm)" selected> Coloring & Highlight (By Confirm)</option>
+                </select></td></tr>
+        <br>
+        <br>
                 
-            </select></ul>
-        </p>
-        <p>
-            <br>
-            
-            <ul><input type="submit" value="Simpan" name="Simpan" /></ul>
+            <ul><button type="submit" name="Simpan" class="btn btn-primary">Simpan</button></ul>
         </p>
 
-        </fieldset>
+        </table>
         
     </form>
     

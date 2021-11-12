@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 
 	include("koneksi.php");
@@ -15,35 +14,21 @@ session_start();
 		if(!empty($username) && !empty($password) && !is_numeric($username))
 		{
 
-			//read from database
-			$query = "select * from login where username = '$username' limit 1";
-			$result = mysqli_query($con, $query);
+			//save to database
+			$user_id = random_num(20);
+			$query = "insert into login (user_id,username,password) values ('$user_id','$username','$password')";
 
-			if($result)
-			{
-				if($result && mysqli_num_rows($result) > 0)
-				{
+			mysqli_query($con, $query);
 
-					$user_data = mysqli_fetch_assoc($result);
-					
-					if($user_data['password'] === $password)
-					{
-
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: user.php");
-						die;
-					}
-				}
-			}
-			
-			echo "wrong username or password!";
+			header("Location: login.php");
+			die;
 		}else
 		{
-			echo "wrong username or password!";
+			echo "Please enter some valid information!";
 		}
 	}
-
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,7 +43,7 @@ session_start();
 
 	<div class="container">
 		<br>
-		<h4 class="text-center">FORM LOGIN</h4>
+		<h4 class="text-center">SIGN UP</h4>
 		<hr>
 		
 		<form method="post">
@@ -72,7 +57,7 @@ session_start();
 					<input type="text" name="username" class="form-control" placeholder="Masukkan Username Anda">
 				</div>
 			</div>
-			
+
 			<div class="form-group">
 				<label>Password</label>
 
@@ -84,11 +69,11 @@ session_start();
 				</div>
 			</div>
 			<br>
-			<button type="submit" class="btn btn-primary">LOGIN</button>
+			<button type="submit" class="btn btn-primary">SIGN UP</button>
 			<button type="reset" class="btn btn-danger">RESET</button>
 			<br>
 			<br>
-			<a href="signup.php">Click to Signup</a>
+			<a href="login.php">Click to Login</a><br><br>
 		</form>
 	</div>
 </body>

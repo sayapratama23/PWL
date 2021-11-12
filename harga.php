@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link js-scrool-trigger" aria-current="page" href="index.php">HOME</a>
+            <a class="nav-link js-scrool-trigger" aria-current="page" href="user.php">HOME</a>
             </li>
             <li class="nav-item">
             <a class="nav-link js-scrool-trigger"href="input_siswa.php">INPUT PELANGGAN</a>
@@ -38,17 +38,14 @@
                 BARBERSHOP
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="input_siswa.php">HARGA</a></li>
+                <li><a class="dropdown-item" href="harga.php">SERVICES & PRICES</a></li>
                 <li><a class="dropdown-item" href="list.php">DAFTAR PELANGGAN</a></li>   
             </ul>
             </li>
             
             </li>
         </ul>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" href="list.php" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success"type="submit">Search</button>
-        </form>
+        
         </div>
     </div>
     </nav>
@@ -56,12 +53,14 @@
     <br>
     <br>
     <br>
-    <ul class="list-group list-group-flush">
-        <ul><li class="list-group-item">Cukur Biasa                 : 20.000</li></ul>
-        <ul><li class="list-group-item">Cukur + Keramas             : 25.000</li></ul>
-        <ul> <li class="list-group-item">Jenggot                    : +3.000</li></ul>
-        <ul> <li class="list-group-item">Cukur + Warna + Keramas    : 150.000</li></ul>
+    <ul class="list-group">
+        <li class="list-group-item">Premium Cut (Free Hot Towel, Wash, Hair Tonic, Pomade & Styling</li>
+        <li class="list-group-item">Gentleman Cut (Hair Cut Only)         :    Rp. 20.000</li>
+        <li class="list-group-item">Hair Design (Free Hair Tonic, Pomade & Styling)                :     Rp. 10.000</li>
+        <li class="list-group-item">Shaving (Free Hot Towel, After Shave product)   :  Rp. 10.000</li>
+        <li class="list-group-item">Coloring & Highlight . . . By Confirm</li>
     </ul>
+    
 
 
 

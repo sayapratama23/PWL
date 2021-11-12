@@ -12,7 +12,7 @@ $id = $_GET['id'];
 
 // buat query untuk ambil data dari database
 $sql = "SELECT * FROM pelanggan WHERE id=$id";
-$query = mysqli_query($db, $sql);
+$query = mysqli_query($con, $sql);
 $pelanggan = mysqli_fetch_assoc($query);
 
 // jika data yang di-edit tidak ditemukan
@@ -36,7 +36,7 @@ if( mysqli_num_rows($query) < 1 ){
 
     <form action=" simpan_siswa.php" method="POST">
 
-        <fieldset>
+        <table>
 
             <input type="hidden" name="Id" value="<?php echo $pelanggan['Id'] ?>" />
 
@@ -58,9 +58,11 @@ if( mysqli_num_rows($query) < 1 ){
             <label for="Tagihan">Tagihan: </label>
             <?php $Tagihan = $pelanggan['Tagihan']; ?>
             <select name="Tagihan">
-                <option <?php echo ($Tagihan == 'Biasa = 20.000') ? "selected": "" ?>>Biasa = 20.000</option>
-                <option <?php echo ($Tagihan == 'Cukur + Keramas = 25.000') ? "selected": "" ?>>Cukur + Keramas = 25.000</option>
-                <option <?php echo ($Tagihan == 'Jenggot = +3.000') ? "selected": "" ?>>Jenggot = +3.000</option>
+                <option <?php echo ($Tagihan == 'Premium Cut 25K') ? "selected": "" ?>>Premium Cut (Wash,Hair Tonic,Pomade & Styling) 25K</option>
+                <option <?php echo ($Tagihan == 'Gentleman Cut 20K') ? "selected": "" ?>>Gentleman Cut (Hair Cut Only) 20K</option>
+                <option <?php echo ($Tagihan == 'Hair Design 10K') ? "selected": "" ?>>Hair Design (Free Hair Tonic, Pomade & Styling) 10K</option>
+                <option <?php echo ($Tagihan == 'Shaving 10K') ? "selected": "" ?>>Shaving (Hot Towel & After Shave Product) 10K</option>
+                <option <?php echo ($Tagihan == 'Coloring (By Confirm)') ? "selected": "" ?>>Coloring & Highlight (By Confirm)</option>
             </select>
         </p>
         <p>
@@ -68,7 +70,7 @@ if( mysqli_num_rows($query) < 1 ){
             <input type="submit" value="Simpan" name="Simpan" />
         </p>
 
-        </fieldset>
+</table>
 
 
     </form>

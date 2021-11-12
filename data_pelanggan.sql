@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2021 at 03:04 PM
+-- Generation Time: Nov 09, 2021 at 09:32 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -28,7 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `login` (
-  `id` int(10) NOT NULL,
+  `id` bigint(50) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -37,8 +38,10 @@ CREATE TABLE `login` (
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`id`, `username`, `password`) VALUES
-(1, 'admin', '123');
+INSERT INTO `login` (`id`, `user_id`, `username`, `password`) VALUES
+(2, 229519, 'mario', '12345'),
+(5, 239349, 'Megi', '543'),
+(6, 818, 'jonas', '123');
 
 -- --------------------------------------------------------
 
@@ -59,12 +62,10 @@ CREATE TABLE `pelanggan` (
 --
 
 INSERT INTO `pelanggan` (`Id`, `Nama`, `JK`, `NO_HP`, `Tagihan`) VALUES
-(19, 'Megi', 'Perempuan', '083456778876', 'Cukur + Keramas = 25.000'),
-(20, 'Arsi Pratama', 'Laki-Laki', '082230892356', 'Biasa = 20.000'),
-(23, 'Sigit', 'Laki-Laki', '082147257111', 'Biasa = 20.000'),
-(31, 'Gery Loking', 'Laki-Laki', '082956778675', 'Cukur + Keramas = 25.000'),
-(32, 'Ahmad', 'Laki-Laki', '081335665543', 'Biasa = 20.000'),
-(33, 'Patris', 'Laki-Laki', '083456776434', 'Cukur + Keramas = 25.000');
+(10, 'Joana', 'Perempuan', '082956778675', 'Hair Design 10K'),
+(11, 'Jonas', 'Laki-Laki', '082341118869', 'Gentleman Cut 20K'),
+(12, 'Jaken', 'Laki-Laki', '082334554321', 'Premium Cut 25K'),
+(13, 'Mario Pratama', 'Laki-Laki', '081253318674', 'Biasa = 20.000');
 
 --
 -- Indexes for dumped tables
@@ -74,7 +75,10 @@ INSERT INTO `pelanggan` (`Id`, `Nama`, `JK`, `NO_HP`, `Tagihan`) VALUES
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`),
+  ADD KEY `username` (`username`),
+  ADD KEY `password` (`password`);
 
 --
 -- Indexes for table `pelanggan`
@@ -90,13 +94,13 @@ ALTER TABLE `pelanggan`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

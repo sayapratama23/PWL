@@ -9,7 +9,7 @@ if( isset($_GET['id']) ){
 
     // buat query hapus
     $sql = "DELETE FROM pelanggan WHERE id=$id";
-    $query = mysqli_query($db, $sql);
+    $query = mysqli_query($con, $sql);
 
     // apakah query hapus berhasil?
     if( $query ){
