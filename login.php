@@ -63,25 +63,34 @@ session_start();
 		
 		<form method="post">
 			<div class="form-group">
-				<label>Username</label>
-
 				<div class="input-group">
 					<div class="input-group-prepend">
-						<div class="input-group-text"><i class="fas fa-users"></i></div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
 					</div>
 					<input type="text" name="username" class="form-control" placeholder="Masukkan Username Anda">
 				</div>
 			</div>
-			
+			<br>
 			<div class="form-group">
-				<label>Password</label>
-
+				
 				<div class="input-group">
 					<div class="input-group-prepend">
-						<div class="input-group-text"><i class="fas fa-unlock-alt"></i></div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+</svg>						
 					</div>
 					<input type="password" name="password" class="form-control" placeholder="Masukkan Pasword Anda">
 				</div>
+			<br>
+			<div class="form-label-group">
+				<select class="form-control" name="level"> 
+					<option value="Pegawai">Pegawai</option>		
+					<option value="Administrator">Administrator</option>
+				</select>
+			</div>	
+			
 			</div>
 			<br>
 			<button type="submit" class="btn btn-primary">LOGIN</button>
