@@ -61,7 +61,7 @@ session_start();
 		<h4 class="text-center">FORM LOGIN</h4>
 		<hr>
 		
-		<form method="post">
+		<form action="aksi.php" method="post">
 			<div class="form-group">
 				<div class="input-group">
 					<div class="input-group-prepend">
@@ -83,20 +83,10 @@ session_start();
 					</div>
 					<input type="password" name="password" class="form-control" placeholder="Masukkan Pasword Anda">
 				</div>
-			<br>
-			<div class="form-label-group">
-				<select class="form-control" name="level"> 
-					<option value="Pegawai">Pegawai</option>		
-					<option value="Administrator">Administrator</option>
-				</select>
-			</div>	
+
 			
 			</div>
-			<br>
-			<button type="submit" class="btn btn-primary">LOGIN</button>
-			<button type="reset" class="btn btn-danger">RESET</button>
-			<br>
-			<br>
+			<center><td><input type="submit" class="tombol_login" value="login"></td></center>
 			<a href="signup.php">Click to Signup</a>
 		</form>
 	</div>
