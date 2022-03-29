@@ -21,7 +21,7 @@
     <br>
         <nav>
              <ul>
-                <li><a href="user.php">Beranda</a></li>
+                <li><a href="index.php">Beranda</a></li>
              </ul>
          </nav>
          <br>
